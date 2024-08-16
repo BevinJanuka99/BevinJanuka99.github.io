@@ -1,0 +1,614 @@
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+    header .container, 
+    .hero .container, 
+    .about .container, 
+    .classes .container, 
+    .instructors .container, 
+    .gallery .container, 
+    .contact .container,
+    .login .container,
+    footer .container {
+        padding: 0 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .class,
+    .instructor,
+    .gallery-item {
+        margin-bottom: 30px;
+    }
+
+    .class img,
+    .instructor img,
+    .gallery-item img {
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .menu-icon {
+        top: 15px;
+        left: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .class img,
+    .instructor img,
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+
+    .social-media li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Sidebar Responsive Adjustments */
+.sidebar {
+    width: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar.open {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul .dropdown-content {
+    position: static;
+    padding: 0;
+}
+
+.sidebar ul .dropdown-content a {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+/* Adjustments for Login Form */
+.login form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Adjusting buttons */
+.btn {
+    width: auto;
+    padding: 10px 15px;
+}
+
+/* Logo Styling */
+.logo {
+    height: 80px; /* Adjust the size as needed */
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+
+/* Basic Reset and Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3ee; /* Light nude background */
+    color: #5a5a5a; /* Soft dark grey text */
+	text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #d2c4b8; /* Warm nude background */
+    color: #ffffff; /* White text */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff; /* White text */
+    animation: slideInLeft 1s ease-out; /* Slide-in from left */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #a89f94; /* Muted nude text on hover */
+}
+
+header nav ul .dropdown {
+    position: relative;
+}
+
+header nav ul .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d2c4b8; /* Warm nude background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header nav ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header nav ul .dropdown-content a {
+    display: block;
+    padding: 5px 10px;
+    color: #ffffff; /* White text */
+    text-decoration: none;
+}
+
+header nav ul .dropdown-content a:hover {
+    background-color: #a89f94; /* Muted nude hover */
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #a89f94; /* Muted nude background */
+    color: #ffffff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-out; /* Fade-in animation */
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #ffffff; /* White button */
+    color: #5c5858; /* Muted nude text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    background-color: #e0d2c2; /* Light nude button on hover */
+}
+
+/* Sections Styling */
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff3135; /* Muted nude text */
+    text-align: center;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Section Styling */
+.about-img {
+    margin-top: 20px;
+}
+
+/* Classes Section Styling */
+.classes {
+    background-color: #ffffff; /* White background */
+}
+
+.class {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.class img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Instructors Section Styling */
+.instructors {
+    background-color: #f9f3ee; /* Light nude background */
+}
+
+.instructor {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.instructor img {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Gallery Section Styling */
+.gallery {
+    background-color: #ffffff; /* White background */
+}
+
+.gallery-item {
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contact Section Styling */
+.contact {
+    background-color: #f9f3ee; /* Light nude background */
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #a89f94; /* Muted nude text */
+    font-size: 16px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #d2c4b8; /* Warm nude background */
+    color: #ffffff; /* White text */
+    padding: 10px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+/* Button Styling */
+.btn {
+    background-color: #a89f94; /* Muted nude background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    /*display: inline-block;*/
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #918883; /* Darker nude on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Basic Reset and Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3ee; /* Light nude background */
+    color: #5a5a5a; /* Soft dark grey text */
+}
+
+/* Header Styling */
+header {
+    background-color: #d2c4b8; /* Warm nude background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff; /* White text */
+}
+
+/* Floating Menu Icon Styling */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* White text */
+    background-color: #bab7b3; /* Warm nude background */
+    padding: 10px;
+    border-radius: 50%;
+    position: fixed;
+    top: 75px;
+    left: 20px;
+    z-index: 2000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.menu-icon:hover {
+    background-color: #b9a59d; /* Darker nude hover */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #d2c4b8; /* Warm nude background */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1001;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff; /* White text */
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+}
+
+.sidebar ul li:hover {
+    background-color: #b9a59d; /* Darker nude hover */
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Dropdown Content */
+.sidebar ul li .dropdown-content {
+    display: none;
+    background-color: #bfa89d; /* Soft nude background */
+    padding: 0;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover .dropdown-content {
+    display: block;
+}
+
+.sidebar ul li .dropdown-content li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #ffffff; /* White text */
+}
+
+.sidebar ul li .dropdown-content li a {
+    color: #ffffff; /* White text */
+}
+
+.sidebar ul li .dropdown-content li:hover {
+    background-color: #a89f94; /* Darker nude hover */
+}
+
+/* Fade-in Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+---------------------------------------------------------
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}

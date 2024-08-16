@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sri Lanka Kung-Fu School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+		<img src="logo.png" alt="Kung-Fu School Logo" class="logo">
+            <h1>Sri Lanka Kung-Fu School</h1>
+			<div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+		</div>
+	</header>
+            <nav class="sidebar" id="sidebar">
+				<div class="close-icon" id="close-icon">&times;</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#classes">Classes</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#instructors">Instructors</a>
+                        <ul class="dropdown-content">
+                            <li><a href="index.html#instructor1">Instructor 1</a></li>
+                            <li><a href="index.html#instructor2">Instructor 2</a></li>
+                            <li><a href="index.html#instructor3">Instructor 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="login">
+        <div class="container">
+            <h2>Login</h2>
+            <form action="login-process.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sri Lanka Kung-Fu School. All rights reserved.</p>
+        </div>
+    </footer>
+	<script src="script.js"></script>
+</body>
+</html>
